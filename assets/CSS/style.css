@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+
+
+body {
+   width: 100%;
+   height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   font-family: "Bebas Neue", sans-serif;
+}
+
+.container {
+   width: 50%;
+   min-width: 310px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   border: 1px solid black;
+   border-radius: 1em;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+
+   width: 95%;
+   padding-bottom: 1em;
+
+   font-family: "Matemasie", sans-serif;
+   color: blue;
+}
+
+.header > h1 {
+   font-size: 5em;
+   
+}
+
+.header > p {
+   font-size: 1em;
+   color: black;
+}
+
+form {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 2em;
+
+   
+
+   padding-bottom: 1em;
+}
+
+form > input , form > select {
+   min-width: 100px;
+
+   padding: 0.2em;
+
+   border: 1px solid black;
+   border-radius: 0.2em;
+}
+
+form > button {
+   border: 1px solid black;
+   border-radius: 0.2em;
+
+   background-color: lightgray;
+
+   cursor: pointer;
+
+   padding: 0.2em;
+}
+
+.dados {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1em;
+
+   padding-bottom: 1em;
+}
+
+.principal {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 2em;
+
+   flex-wrap: wrap;
+}
+
+.principal > h1 {
+   min-width: 140px;
+}
+
+.secundario {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 2em;
+}
+
+.secundario > p {
+   min-width: 100px;
+}
+

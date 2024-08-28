@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>RealTempo</title>
+   <link rel="stylesheet" href="assets/CSS/reset.css">
+   <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <h1>RealTempo</h1>
+         <p>clima e tempo em sua cidade</p>
+      </div>
+      <div class="formulario">
+         <form action="#">
+            <input type="text" name="cidade" id="cidade" placeholder="Cidade:">
+
+            <select name="estado" id="estado">
+               <option value="none" selected disabled>Estado:</option>
+               <option value="AC">Acre</option>
+               <option value="AL">Alagoas</option>
+               <option value="AP">Amapá</option>
+               <option value="AM">Amazonas</option>
+               <option value="BA">Bahia</option>
+               <option value="CE">Ceará</option>
+               <option value="DF">Distrito Federal</option>
+               <option value="ES">Espírito Santo</option>
+               <option value="GO">Goiás</option>
+               <option value="MA">Maranhão</option>
+               <option value="MT">Mato Grosso</option>
+               <option value="MS">Mato Grosso do Sul</option>
+               <option value="MG">Minas Gerais</option>
+               <option value="PA">Pará</option>
+               <option value="PB">Paraíba</option>
+               <option value="PR">Paraná</option>
+               <option value="PE">Pernambuco</option>
+               <option value="PI">Piauí</option>
+               <option value="RJ">Rio de Janeiro</option>
+               <option value="RN">Rio Grande do Norte</option>
+               <option value="RS">Rio Grande do Sul</option>
+               <option value="RO">Rondônia</option>
+               <option value="RR">Roraima</option>
+               <option value="SC">Santa Catarina</option>
+               <option value="SP">São Paulo</option>
+               <option value="SE">Sergipe</option>
+               <option value="TO">Tocantins</option>
+           </select>
+
+           <button type="submit">Buscar</button>
+           
+         </form>
+      </div>
+
+      <div class="dados">
+         <div class="principal">
+            <h1 class="city">Cidade: </h1>
+            <h1 class="temp">Temperatura: </h1>
+         </div>
+         <div class="secundario">
+            <p>Nascer do Sol:</p>
+            <p>Pôr do Sol:</p>
+            <p>Velocidade do Vento:</p>
+         </div>
+      </div>
+      <div class="image">
+
+      </div>
+   </div>
+
+   <script src="script.js"></script>
+   
+</body>
+</html>
