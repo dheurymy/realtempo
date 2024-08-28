@@ -12,13 +12,13 @@
    });
 
    async function buscarDadosClimaticos(cidade, estado) {
-       const apiKey = '353c8c71'; // Chave da API
-       const url = `https://api.hgbrasil.com/weather?format=json-cors&key=${apiKey}&city_name=${cidade},${estado}`; // Link da API
+       const apiKey = '7fd7a056bcab55de7b8ee592928d44ca'; // Chave da API
+       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade},${estado},BR&appid=${apiKey}&units=metric&lang=pt_br`; // Link da API
 
        console.log(url)
        
        try {
-           const response = await fetch( `https://api.hgbrasil.com/weather?key=${apiKey}&city_name=${cidade},${estado}`);
+           const response = await fetch(url);
            if (!response.ok) {
                throw new Error('Erro ao buscar dados');
            }
@@ -31,12 +31,12 @@
    }
 
    function exibirDadosClimaticos(dados) {
-       document.querySelector('.city').textContent = `Cidade: ${dados.city}`;
-       document.querySelector('.temp').textContent = `Temperatura: ${dados.temp}°C`;
-       document.querySelector('.secundario p:nth-child(1)').textContent = `Nascer do Sol: ${dados.sunrise}`;
-       document.querySelector('.secundario p:nth-child(2)').textContent = `Pôr do Sol: ${dados.sunset}`;
-       document.querySelector('.secundario p:nth-child(3)').textContent = `Velocidade do Vento: ${dados.wind_speedy}`;
-   }
+    document.querySelector('.city').textContent = `Cidade: ${dados.name}`;
+    document.querySelector('.temp').textContent = `Temperatura: ${dados.main.temp}°C`;
+    document.querySelector('.secundario p:nth-child(1)').textContent = `Nascer do Sol: ${new Date(dados.sys.sunrise * 1000).toLocaleTimeString()} AM`;
+    document.querySelector('.secundario p:nth-child(2)').textContent = `Pôr do Sol: ${new Date(dados.sys.sunset * 1000).toLocaleTimeString()} PM`;
+    document.querySelector('.secundario p:nth-child(3)').textContent = `Velocidade do Vento: ${dados.wind.speed} m/s`;
+}
 
 
 
