@@ -12,7 +12,7 @@
    });
 
    async function buscarDadosClimaticos(cidade, estado) {
-       const apiKey = 'c843136b'; // Chave da API
+       const apiKey = '353c8c71'; // Chave da API
        const url = `https://api.hgbrasil.com/weather?format=json-cors&key=${apiKey}&city_name=${cidade},${estado}`; // Link da API
 
        console.log(url)
